@@ -1,0 +1,23 @@
+﻿@model AllEventViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="float-md-right">
+    <form asp-area="" asp-controller="Event" asp-action="Preview" method="get">
+        <button type="submit" id="editButton">Preview Mode</button>
+    </form>
+</div>
+<br />
+
+<h2 class="text-light">Edit page</h2>
+
+<partial name="_AllEventsGrid" model="@Model" />
+
+
+<div class="float-md-left">
+    <form asp-area="" asp-controller="Event" asp-action="Add" method="post">
+        <button type="submit" id="editButton">Add New Event</button>
+    </form>
+</div>

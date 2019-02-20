@@ -1,0 +1,57 @@
+﻿@model EventViewModel
+
+@{
+    ViewData["Title"] = "EditEvent";
+}
+
+<h2 class="text-light">Edit Event</h2>
+<br />
+<form asp-area="" asp-controller="Event" asp-action="Save" method="post">
+
+    <table class="table table-dark table-bordered text-light">
+        <thead>
+            <tr>
+                <th scope="col">EventID</th>
+                <th scope="col">EventName</th>
+                <th scope="col">OddsForFirstTeam</th>
+                <th scope="col">OddsForDraw</th>
+                <th scope="col">OddsForSecondTeam</th>
+                <th scope="col">EventStartDate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Id</td>
+                <td>
+                    <input type="text" asp-for="@Model.Name" id="eventInput" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </td>
+                <td>
+                    <input type="text" asp-for="@Model.OddsFirstTeam" id="eventInput" />
+                    <span asp-validation-for="OddsFirstTeam" class="text-danger"></span>
+                </td>
+                <td>
+                    <input type="text" asp-for="@Model.OddsDraw" id="eventInput" />
+                    <span asp-validation-for="OddsDraw" class="text-danger"></span>
+                </td>
+                <td>
+                    <input type="text" asp-for="@Model.OddsSecondTeam" id="eventInput" />
+                    <span asp-validation-for="OddsSecondTeam" class="text-danger"></span>
+                </td>
+                <td>
+                    <input type="text" asp-for="@Model.StartDate" id="eventInput" />
+                    <span asp-validation-for="StartDate" class="text-danger"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="float-md-left">
+        <button type="submit" id="editButton">Save</button>
+        <input type="hidden" asp-for="@Model.Id" />
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

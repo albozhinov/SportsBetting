@@ -1,0 +1,60 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    /*background-color: black;*/
+    background: url(/images/sports-betting-legalresize.jpg);
+    background-size: initial;
+    background-size: cover;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.img-fluid {
+    max-width: 250px;
+    max-height: 50px;
+    background-color: #FD8328;
+}
+
+#editButton {
+    background-color: coral;
+    border-radius: 5px 5px;
+    border: 1px solid black;
+    color: #2C4580;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.2s;
+    font-weight: bold;
+}
+
+    #editButton:hover {
+        color: white;
+        border-color: white;
+        background-color: orange;
+    }
+
+#eventInput {
+    background-color: transparent !important;
+    border: none !important;
+    color: white;
+}
+.passedEvent {
+    background-color: lightsalmon !important;
+    color: black;
+}
+
+.evenRow {
+    background-color: honeydew !important;
+    color: black;
+}
+
+.oddRow {
+    background-color: aliceblue !important;
+    color: black;
+}
